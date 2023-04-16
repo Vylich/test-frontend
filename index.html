@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test frontend</title>
+  </head>
+  <body class="page">
+    <div class="page__wrapper">
+      <header class="page-header">
+        <div class="main-nav">
+          <a href="/page">
+            <img class="logo" src="/assets/logo.png" width="100" alt="logo" />
+          </a>
+          <div class="main-nav__cart">
+            <a href="/cartt" class="cart">
+              <img
+                src="/assets/cart.svg"
+                width="30"
+                alt="cart"
+                class="cart__img"
+              />
+              <div class="cart__title">
+                В корзине <span class="cart__count">7</span> товаров
+              </div>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="container"></div>
+      <main class="page-main">
+        <div class="wrapper">
+          <div class="sort">
+            <form action="">
+              <div class="sort__title">Бренды</div>
+              <ul class="sort__brands brands-list"></ul>
+              <div class="button-wrapper">
+                <button class="button button--submit" type="submit">Применить</button>
+                <button class="button button--reset" type="reset">Сбросить</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-wrapper cards"></div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <div class="footer-copyright">
+          Тестовое задание выполнил Сидоренко Илья (@Vylich)
+        </div>
+      </footer>
+      </div>
+
+    <template id="brand">
+      <label class="brand">
+        <span id="brand-id" class="visually-hidden"></span>
+        <span class="brand__title"></span>
+        <input type="checkbox" class="brand__input visually-hidden" />
+        <span class="brand__checkmark"></span>
+        <input type="text" class="brand__id visually-hidden" value="" />
+      </label>
+    </template>
+
+    <template id="card">
+      <div class="card">
+        <div class="card__title"></div>
+        <img class="card__img" src="" alt="Фото продукта" width="200" />
+        <div class="card__wrapper">
+          <div class="block-wrapper">
+            <div class="price__currency">USD</div>
+            <div class="price__value"></div>
+            <span id="card-brand" class="visually-hidden"></span>
+          </div>
+          <button type="button" class="button-add" type="submit"><span id="minus" class="minus visually-hidden"></span></button>
+
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
